@@ -13,8 +13,7 @@ function fetchStockData(ticker, days) {
   fetch(url)
     .then(res => res.json())
     .then(data => {
-      document.getElementById('stockChart').style.display = 'block';
-      document.getElementById('stockChart').style.backgroundColor = 'white';
+      
 
       const labels = data.results.map(r => new Date(r.t).toLocaleDateString());
       const values = data.results.map(r => r.c);
@@ -36,6 +35,8 @@ function fetchStockData(ticker, days) {
           }]
         }
       });
+      document.getElementById('stockChart').style.display = 'block';
+      document.getElementById('stockChart').style.backgroundColor = 'white';
     });
 }
 

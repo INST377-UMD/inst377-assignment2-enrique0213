@@ -216,19 +216,38 @@ table, th, td {
   justify-content: center;
 }
 
-.custom-button {
-  background-color: #6c757d;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 8px 15px;
-  margin: 5px;
+
+
+/* CSS */
+.button-32 {
+  background-color: #fff000;
+  border-radius: 12px;
+  color: #000;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  width: 10%;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.custom-button:hover {
-  background-color: #5a6268;
+.button-32:not(:disabled):hover,
+.button-32:not(:disabled):focus {
+  outline: 0;
+  background: #f4e603;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.button-32:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
 }
 
 #breed-info {
@@ -248,14 +267,14 @@ table, th, td {
   margin-top: 20px;
 }
 
-button {
+/* button {
   padding: 10px 15px;
   border: none;
   background-color: #4CAF50;
   color: white;
   border-radius: 5px;
   cursor: pointer;
-}
+} */
 
 button:hover {
   background-color: #45a049;
@@ -272,4 +291,39 @@ button:hover {
 
 #dog-info h3 {
   margin-top: 0;
+}
+
+/* CSS */
+button {
+  align-items: center;
+  appearance: button;
+  background-color: #0276FF;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: "RM Neue",sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 10px 21px;
+  text-align: center;
+  text-transform: none;
+  transition: color .13s ease-in-out,background .13s ease-in-out,opacity .13s ease-in-out,box-shadow .13s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:active {
+  background-color: #006AE8;
+}
+
+button:hover {
+  background-color: #1C84FF;
 }
