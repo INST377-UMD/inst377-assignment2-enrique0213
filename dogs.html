@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>Dogs</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+  </head>
+  <body>
+    <h1>INST377 - Doggos</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="stocks.html">Stocks</a></li>
+        <li><a href="dogs.html">Dogs</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Doggos! &#128054;</h1>
+      <div id="carousel" class="slider"></div>
+      <div id="breeds" style="margin-top: 20px"></div>
+      <div
+        id="breed-info"
+        style="
+          margin-top: 20px;
+          background: #f9f9f9;
+          padding: 10px;
+          border-radius: 8px;
+        "
+      ></div>
+    </main>
+
+    <br />
+    <div id="buttons-container" style="margin-top: 20px"></div>
+    <div id="dog-info" style="display: none">
+      <h3 id="breed-name"></h3>
+      <p id="breed-description"></p>
+      <p><strong>Min Life Span:</strong> <span id="min-life"></span></p>
+      <p><strong>Max Life Span:</strong> <span id="max-life"></span></p>
+    </div>
+
+    <br />
+    <div class="audio-controls">
+      <h3>In this web page there are options to Navigate using Audio!</h3>
+      <p>Ensure your microphone is on to be aboloe to use this feature.</p>
+      <ul>
+        <li>Load Dog Breed</li>
+        <ul>
+          <li>Say: <b>Load Dog Breed &lt;Dog Breed Name&gt;</b></li>
+        </ul>
+        <li>Navigate to a Different Page</li>
+        <ul>
+          <li>Say: <b>Navigate to &lt;page&gt;</b></li>
+        </ul>
+        <li>Change the Page Color</li>
+        <ul>
+          <li>Say: <b>Change the color to &lt;color&gt;</b></li>
+        </ul>
+        <li>Say Hello Back to you!</li>
+        <ul>
+          <li>Say: <b>Hello</b></li>
+        </ul>
+      </ul>
+      <br />
+      <div class="audio-buttons">
+        <button onclick="annyang.start()" class="button-17" role="button">
+          Turn on Audio
+        </button>
+        <button onclick="annyang.abort()" class="button-17" role="button">
+          Turn off Audio
+        </button>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dogs.js"></script>
+  </body>
+</html>
