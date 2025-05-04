@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>Stocks</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <style>
+      .stockChart {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>INST377 - Activities</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="stocks.html">Stocks</a></li>
+        <li><a href="dogs.html">Dogs</a></li>
+      </ul>
+    </nav>
+
+    <h1>Let's chart some stocks!</h1>
+    <input
+      type="text"
+      id="ticker"
+      placeholder="Enter Stock Ticker"
+      maxlength="5"
+      required
+    />
+    <br />
+    <select id="range">
+      <option value="30">30 Days</option>
+      <option value="60">60 Days</option>
+      <option value="90">90 Days</option>
+    </select>
+    <br />
+    <button id="lookup" class="button-32">Lookup</button>
+    <br />
+    <canvas id="stockChart" width="600" height="400"></canvas>
+
+    <table id="redditStocks"></table>
+
+    <br />
+    <div class="audio-controls">
+      <h3>In this web page there are options to Navigate using Audio!</h3>
+      <p>Ensure your microphone is on to be aboloe to use this feature.</p>
+      <ul>
+        <li>Lookup Stock</li>
+        <ul>
+          <li>Say: <b>Lookup &lt;Stock Ticker&gt;</b></li>
+        </ul>
+        <li>Navigate to a Different Page</li>
+        <ul>
+          <li>Say: <b>Navigate to &lt;page&gt;</b></li>
+        </ul>
+        <li>Change the Page Color</li>
+        <ul>
+          <li>Say: <b>Change the color to &lt;color&gt;</b></li>
+        </ul>
+        <li>Say Hello Back to you!</li>
+        <ul>
+          <li>Say: <b>Hello</b></li>
+        </ul>
+      </ul>
+      <br />
+      <div class="audio-buttons">
+        <button onclick="annyang.start()" class="button-17" role="button">
+          Turn on Audio
+        </button>
+        <button onclick="annyang.abort()" class="button-17" role="button">
+          Turn off Audio
+        </button>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/stocks.js"></script>
+  </body>
+</html>
